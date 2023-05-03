@@ -19,7 +19,7 @@ def main(page: ft.Page):
                                 )
     def merge_pdf(e):
         cantidad = len(files_update[0])
-        pdf_merger = PyPDF2.PdfFileMerger()
+        pdf_merger = PyPDF2.PdfWriter()
         for i in files_update[0]:
             print(files_update[0][0].path)
             f = open(str(i.path),'rb')
@@ -100,7 +100,7 @@ def main(page: ft.Page):
 
     title_gp = ft.Row(
         [
-            ft.Text("Mari's PDF", size=50),
+            ft.Text("Documents PDF", size=50),
         ],
         alignment=ft.MainAxisAlignment.CENTER,
     )
